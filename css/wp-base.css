@@ -1,0 +1,37 @@
+
+
+.site-content {
+    /**/
+
+}
+
+article {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.sidebar {
+    width: 280px;
+    float: left;
+    list-style: none;
+    margin-top: 2em;
+	font-size: 14px
+}
+
+.widgettitle {
+    padding: .25rem 0;
+    font-size: 1.25rem
+}
+
+.widget {
+    margin-bottom: 3rem
+}
+
+label {
+	display: block
+}
+
+.commentlist {
+	list-style: none;
+	padding-left: 0;
+}

@@ -1,0 +1,158 @@
+.gradient-text {
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    background: -webkit-linear-gradient(blue, green);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-shadow: 0px 0px #00000000;
+padding-bottom: .125em;
+}
+
+.gradient-to-top-right {
+    background-image: linear-gradient(45deg, 45deg);
+}
+
+.gradient-to-bottom-right {
+    background-image: linear-gradient(45deg, -45deg);
+}
+
+/* BLUE GRADIENTS */
+.blue-to-blue {
+    background-color: #007ABB;
+    background-image: linear-gradient(45deg, #007ABB, #007ABB);
+}
+
+.blue-to-green {
+    background-color: #007ABB;
+    background-image: linear-gradient(45deg, #007ABB, #008566);
+}
+
+.blue-to-orange {
+    background-color: #007ABB;
+    background-image: linear-gradient(45deg, #007ABB, #D84806);
+}
+
+.blue-to-pink {
+    background-color: #007ABB;
+    background-image: linear-gradient(45deg, #007ABB, #D20098);
+}
+
+.blue-to-purple {
+    background-color: #007ABB;
+    background-image: linear-gradient(45deg, #007ABB, #944A9C);
+}
+
+
+/* GREEN GRADIENTS */
+
+.green-to-blue {
+    background-color: #008566;
+    background-image: linear-gradient(45deg, #008566, #007ABB);
+}
+
+.green-to-green {
+    background-color: #008566;
+    background-image: linear-gradient(45deg, #008566, #008566);
+}
+
+.green-to-orange {
+    background-color: #008566;
+    background-image: linear-gradient(45deg, #008566, #D84806);
+}
+
+.green-to-pink {
+    background-color: #008566;
+    background-image: linear-gradient(45deg, #008566, #D20098);
+}
+
+.green-to-purple {
+    background-color: #008566;
+    background-image: linear-gradient(45deg, #008566, #944A9C);
+}
+
+
+/* ORANGE GRADIENTS */
+
+.orange-to-blue {
+    background-color: #D84806;
+    background-image: linear-gradient(45deg, #D84806, #007ABB);
+}
+
+.orange-to-green {
+    background-color: #D84806;
+    background-image: linear-gradient(45deg, #D84806, #008566);
+}
+
+.orange-to-orange {
+    background-color: #D84806;
+    background-image: linear-gradient(45deg, #D84806, #D84806);
+}
+
+.orange-to-pink {
+    background-color: #D84806;
+    background-image: linear-gradient(45deg, #D84806, #D20098);
+}
+
+.orange-to-purple {
+    background-color: #D84806;
+    background-image: linear-gradient(45deg, #D84806, #944A9C);
+}
+
+
+/* PINK GRADIENTS */
+
+.pink-to-blue {
+    background-color: #D20098;
+    background-image: linear-gradient(45deg, #D20098, #007ABB);
+}
+
+.pink-to-green {
+    background-color: #D20098;
+    background-image: linear-gradient(45deg, #D20098, #008566);
+}
+
+.pink-to-orange {
+    background-color: #D20098;
+    background-image: linear-gradient(45deg, #D20098, #D84806);
+}
+
+.pink-to-pink {
+    background-color: #D20098;
+    background-image: linear-gradient(45deg, #D20098, #D20098);
+}
+
+.pink-to-purple {
+    background-color: #D20098;
+    background-image: linear-gradient(45deg, #D20098, #944A9C);
+}
+
+/* PURPLE GRADIENTS */
+
+.purple-to-blue {
+    background-color: #944A9C;
+    background-image: linear-gradient(45deg, #944A9C, #007ABB);
+}
+
+.purple-to-green {
+    background-color: #944A9C;
+    background-image: linear-gradient(45deg, #944A9C, #008566);
+}
+
+.purple-to-orange {
+    background-color: #944A9C;
+    background-image: linear-gradient(45deg, #944A9C, #D84806);
+}
+
+.purple-to-pink {
+    background-color: #944A9C;
+    background-image: linear-gradient(45deg, #944A9C, #D20098);
+}
+
+.purple-to-purple {
+    background-color: #944A9C;
+    background-image: linear-gradient(45deg, #944A9C, #944A9C);
+}

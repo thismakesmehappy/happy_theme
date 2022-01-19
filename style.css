@@ -1,0 +1,61 @@
+/*
+Theme Name: This Makes Me Happy from scratch
+Theme URI: https://www.thismakesmehappy.co
+Author: Bernardo Margulis, This Makes Me Happy
+Author URI: https://www.thismakesmehappy.co
+Description: Custom theme for This Makes Me Happy
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: <https://www.gnu.org/licenses/gpl-2.0.html>
+Text Domain: my-custom-theme
+Tags: custom-background
+*/
+
+@import url("css/gradients.css");
+@import url("css/colors.css");
+@import url("css/wp-base.css");
+@import url("css/site-header.css");
+
+body {
+    font-family: courier-prime, monospace;
+}
+
+h1, h2, h3, h4, h5, h6, .display, .site-title a{
+    font-family: "tuppence" !important;
+    color: #000000;
+}
+
+.site-description {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.display {
+    font-family: "tuppence" !important;
+    font-style: italic !important;
+    font-size: 2em !important;
+    line-height: 1.2em;
+
+}
+
+h1 {
+    font-size: 1.25em;
+}
+
+a {
+    text-decoration: underline;
+}
+
+.no-underline, prev a, next a {
+    text-decoration: none !important;
+}
+
+.highlight {
+    text-transform: uppercase !important;
+}
+
+.featured-slider {
+    margin: 1em 0em;
+}
+
+

@@ -1,0 +1,37 @@
+#top-nav {
+    padding: 0.5em;
+    color: #ffffff;
+}
+
+#top-nav ul, #top-nav ol {
+    display: block;
+    font-size: 0.9em;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+
+
+#top-nav ul > li, #top-nav .section_name {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0;
+    line-height: 0.85em;
+}
+
+#top-nav ul ul > li {
+    text-transform:unset;
+    font-weight: 400;
+    display: inline;
+}
+
+
+
+ul + li {
+    margin-top: 0.45em;
+}
+
+
+

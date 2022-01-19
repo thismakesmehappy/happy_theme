@@ -1,0 +1,47 @@
+.site-header {
+    padding: 0.5em 0;
+}
+
+.site-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: .25rem;
+    line-height: 1;
+}
+
+.site-title a {
+    text-decoration: none;
+    color: black
+}
+
+.site-header {
+    color: #ffffff !important;
+}
+
+.menu a{
+    color: #ffffff !important;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    padding: 0;
+    margin: 0;
+    line-height: 1em;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+}
+
+.menu ul li ul li a {
+    text-transform: none;
+}

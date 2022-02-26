@@ -11,37 +11,49 @@
 
 .site-title a {
     text-decoration: none;
-    color: black
+    color: #ffffff !important;
+
+    
 }
 
 .site-header {
     color: #ffffff !important;
 }
 
-.menu a{
+.menu a, .menu-main-menu-container a{
     color: #ffffff !important;
 }
 
-.menu ul {
+.menu ul, .menu-main-menu-container ul{
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.menu ul li {
+.menu ul li, .menu-main-menu-container ul li {
     padding: 0;
     margin: 0;
     line-height: 1em;
 }
 
-.menu ul li a {
+.menu ul li a, .menu-main-menu-container ul li a{
     text-decoration: none;
     text-transform: uppercase;
 }
 
-.menu ul li a:hover {
+.menu ul li a:hover, .menu-main-menu-container ul li a:hover {
     text-decoration: underline;
 }
 
-.menu ul li ul li a {
+.menu ul li ul li a, .menu-main-menu-container ul li ul li a {
     text-transform: none;
 }
+
+.menu-main-menu-container>ul>li {
+    padding-top: 0.5rem;
+}
+
+.menu-main-menu-container>ul>li:first-of-type {
+    padding-top: 0rem;
+}
+

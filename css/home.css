@@ -1,0 +1,13 @@
+#carousels {
+    color: #ffffff;
+}
+
+#carousels div {
+    padding: 0.5em;
+    margin: 0;
+}
+
+#carousels div p {
+    margin: 0 !important;
+    padding: 0;
+}

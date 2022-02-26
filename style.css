@@ -11,18 +11,23 @@ Text Domain: my-custom-theme
 Tags: custom-background
 */
 
+
 @import url("css/gradients.css");
 @import url("css/colors.css");
 @import url("css/wp-base.css");
 @import url("css/site-header.css");
+@import url("css/site-footer.css");
+@import url("css/posts.css");
 
-body {
+
+body, a, a:hover, a:active, a:visited {
     font-family: courier-prime, monospace;
+    color: #008566;
 }
 
-h1, h2, h3, h4, h5, h6, .display, .site-title a{
+h1, h2, .display, .site-title a{
     font-family: "tuppence" !important;
-    color: #000000;
+    color: #007ABB;
 }
 
 .site-description {
@@ -34,12 +39,14 @@ h1, h2, h3, h4, h5, h6, .display, .site-title a{
     font-family: "tuppence" !important;
     font-style: italic !important;
     font-size: 2em !important;
-    line-height: 1.2em;
+    line-height: 1.35em;
 
 }
 
 h1 {
     font-size: 1.25em;
+
+        display: inline !important;
 }
 
 a {
@@ -50,12 +57,72 @@ a {
     text-decoration: none !important;
 }
 
-.highlight {
+.highlight, h3, h4, h5 {
     text-transform: uppercase !important;
 }
+
+.menu-item-has-children .menu-item {
+    text-decoration: underline;
+}
+
+.current_page_item {
+    font-style: italic;
+    text-decoration:none !important;
+}
+
+.current_page_item::before {
+    content: "-> ";
+    margin-left: -1.75em;
+}
+
+.noover{
+    pointer-events: none;
+}
+
+h3, h4, h5 {
+    font-size: 1rem !important;
+}
+ h3{
+font-style: italic;
+ }
 
 .featured-slider {
     margin: 1em 0em;
 }
 
 
+.zero-out {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#featured-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 25rem;
+}
+
+.featured-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 25rem;
+}
+
+p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0 !important;
+}
+
+h1.entry-title {
+    display:inline-block !important;
+}
+
+.separator {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    opacity: 1;
+    height: 0.25em;
+    color: #007ABB;
+}

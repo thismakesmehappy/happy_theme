@@ -1,0 +1,9 @@
+#site-footer {
+    color: #ffffff;
+    padding: 0.5em;
+}
+
+#site-footer p {
+    padding: 0;
+    margin: 0 0.5em 0 0;
+}

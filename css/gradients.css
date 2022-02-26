@@ -7,9 +7,14 @@
     background: -webkit-linear-gradient(blue, green);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
-background-clip: text;
-text-shadow: 0px 0px #00000000;
-padding-bottom: .125em;
+background-clip:text;
+padding-bottom: .25em;
+}
+
+.border-gradient {
+    border: .25em solid;
+    border-image-slice: 1;
+    border-width: .25em;
 }
 
 .gradient-to-top-right {
@@ -70,6 +75,11 @@ padding-bottom: .125em;
 }
 
 .green-to-purple {
+    background-color: #008566;
+    background-image: linear-gradient(45deg, #008566, #944A9C);
+}
+
+.green-to-purple-border {
     background-color: #008566;
     background-image: linear-gradient(45deg, #008566, #944A9C);
 }
@@ -155,4 +165,148 @@ padding-bottom: .125em;
 .purple-to-purple {
     background-color: #944A9C;
     background-image: linear-gradient(45deg, #944A9C, #944A9C);
+}
+
+/* BORDER GRADIENTS */
+
+/* BORDER BLUE GRADIENTS */
+.border-blue-to-blue {
+    border-color: #007ABB;
+    border-image-source: linear-gradient(45deg, #007ABB, #007ABB);
+}
+
+.border-blue-to-green {
+    border-color: #007ABB;
+    border-image-source: linear-gradient(45deg, #007ABB, #008566);
+}
+
+.border-blue-to-orange {
+    border-color: #007ABB;
+    border-image-source: linear-gradient(45deg, #007ABB, #D84806);
+}
+
+.border-blue-to-pink {
+    border-color: #007ABB;
+    border-image-source: linear-gradient(45deg, #007ABB, #D20098);
+}
+
+.border-blue-to-purple {
+    border-color: #007ABB;
+    border-image-source: linear-gradient(45deg, #007ABB, #944A9C);
+}
+
+
+/* BORDER GREEN GRADIENTS */
+
+.border-green-to-blue {
+    border-color: #008566;
+    border-image-source: linear-gradient(45deg, #008566, #007ABB);
+}
+
+.border-green-to-green {
+    border-color: #008566;
+    border-image-source: linear-gradient(45deg, #008566, #008566);
+}
+
+.border-green-to-orange {
+    border-color: #008566;
+    border-image-source: linear-gradient(45deg, #008566, #D84806);
+}
+
+.border-green-to-pink {
+    border-color: #008566;
+    border-image-source: linear-gradient(45deg, #008566, #D20098);
+}
+
+.border-green-to-purple {
+    border-color: #008566;
+    border-image-source: linear-gradient(45deg, #008566, #944A9C);
+}
+
+.border-green-to-purple-border {
+    border-color: #008566;
+    border-image-source: linear-gradient(45deg, #008566, #944A9C);
+}
+
+
+/* BORDER ORANGE GRADIENTS */
+
+.border-orange-to-blue {
+    border-color: #D84806;
+    border-image-source: linear-gradient(45deg, #D84806, #007ABB);
+}
+
+.border-orange-to-green {
+    border-color: #D84806;
+    border-image-source: linear-gradient(45deg, #D84806, #008566);
+}
+
+.border-orange-to-orange {
+    border-color: #D84806;
+    border-image-source: linear-gradient(45deg, #D84806, #D84806);
+}
+
+.border-orange-to-pink {
+    border-color: #D84806;
+    border-image-source: linear-gradient(45deg, #D84806, #D20098);
+}
+
+.border-orange-to-purple {
+    border-color: #D84806;
+    border-image-source: linear-gradient(45deg, #D84806, #944A9C);
+}
+
+
+/* BORDER PINK GRADIENTS */
+
+.border-pink-to-blue {
+    border-color: #D20098;
+    border-image-source: linear-gradient(45deg, #D20098, #007ABB);
+}
+
+.border-pink-to-green {
+    border-color: #D20098;
+    border-image-source: linear-gradient(45deg, #D20098, #008566);
+}
+
+.border-pink-to-orange {
+    border-color: #D20098;
+    border-image-source: linear-gradient(45deg, #D20098, #D84806);
+}
+
+.border-pink-to-pink {
+    border-color: #D20098;
+    border-image-source: linear-gradient(45deg, #D20098, #D20098);
+}
+
+.border-pink-to-purple {
+    border-color: #D20098;
+    border-image-source: linear-gradient(45deg, #D20098, #944A9C);
+}
+
+/* BORDER PURPLE GRADIENTS */
+
+.border-purple-to-blue {
+    border-color: #944A9C;
+    border-image-source: linear-gradient(45deg, #944A9C, #007ABB);
+}
+
+.border-purple-to-green {
+    border-color: #944A9C;
+    border-image-source: linear-gradient(45deg, #944A9C, #008566);
+}
+
+.border-purple-to-orange {
+    border-color: #944A9C;
+    border-image-source: linear-gradient(45deg, #944A9C, #D84806);
+}
+
+.border-purple-to-pink {
+    border-color: #944A9C;
+    border-image-source: linear-gradient(45deg, #944A9C, #D20098);
+}
+
+.border-purple-to-purple {
+    border-color: #944A9C;
+    border-image-source: linear-gradient(45deg, #944A9C, #944A9C);
 }

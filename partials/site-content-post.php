@@ -1,5 +1,6 @@
 <div class="site-content">
     <?php
+    $is_monty = false;
     if (have_posts()):
 
         while (have_posts()):
@@ -27,7 +28,8 @@
                                 foreach ($categories as $category) {
                                     if ($category->name != 'Monty Monty') {
 	                                    echo "<span class='badge rounded-pill {$gradient_color}'>$category->name</span> ";
-                                        $is_monty = true;
+                                    } else {
+	                                    $is_monty = true;
                                     }
                                 }
 
@@ -73,8 +75,13 @@
     ?>
 </div><!-- .site-content -->
 
-<script>
-    $("#menu-item-453").addClass("current_page_item");
-</script>
+<?php
+    if ($is_monty) {
+	    echo "<script src='https://code.jquery.com/jquery-3.5.0.js'></script>
+<script>";
+        echo "$('#menu-item-453').addClass('current_page_item');";
+        echo "</script>";
+    }
+?>
 
 

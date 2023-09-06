@@ -11,7 +11,7 @@ Text Domain: my-custom-theme
 Tags: custom-background
 */
 
-
+@import url("css/bootstrap.css");
 @import url("css/gradients.css");
 @import url("css/colors.css");
 @import url("css/wp-base.css");
@@ -25,7 +25,7 @@ body, a, a:hover, a:active, a:visited {
     color: #008566;
 }
 
-h1, h2, .display, .site-title a{
+h1, h2, .display, .site-title a {
     font-family: "tuppence" !important;
     color: #007ABB;
 }
@@ -46,7 +46,7 @@ h1, h2, .display, .site-title a{
 h1 {
     font-size: 1.25em;
 
-        display: inline !important;
+    display: inline !important;
 }
 
 a {
@@ -67,7 +67,7 @@ a {
 
 .current_page_item {
     font-style: italic;
-    text-decoration:none !important;
+    text-decoration: none !important;
 }
 
 .current_page_item::before {
@@ -75,16 +75,17 @@ a {
     margin-left: -1.75em;
 }
 
-.noover{
+.noover {
     pointer-events: none;
 }
 
 h3, h4, h5 {
     font-size: 1rem !important;
 }
- h3{
-font-style: italic;
- }
+
+h3 {
+    font-style: italic;
+}
 
 .featured-slider {
     margin: 1em 0em;
@@ -114,7 +115,7 @@ p:last-child {
 }
 
 h1.entry-title {
-    display:inline-block !important;
+    display: inline-block !important;
 }
 
 .separator {

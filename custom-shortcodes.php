@@ -100,6 +100,8 @@ function post_grid($atts = [], $content = null, $tag = ''): string
         $item_to_return .= "</div>";
     }
     $item_to_return .= "</div>";
+    $uri = get_stylesheet_directory_uri();
+    $item_to_return .= "<script src=\"$uri/js/masonry.pkgd.js\"></script>";
 
     return $item_to_return;
 

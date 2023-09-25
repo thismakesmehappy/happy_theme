@@ -25,9 +25,17 @@ body, a, a:hover, a:active, a:visited {
     color: #008566;
 }
 
-h1, h2, .display, .site-title a {
+h1, h2, .display, .site-title {
     font-family: "tuppence" !important;
+
+}
+
+h1, h2, .display {
     color: #007ABB;
+}
+
+.site-title, .site-description {
+    color: #ffffff !important;
 }
 
 .site-description {

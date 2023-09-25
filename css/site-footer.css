@@ -1,9 +1,14 @@
 #site-footer {
-    color: #ffffff;
+    /*color: #ffffff;*/
     padding: 0.5em;
 }
 
 #site-footer p {
     padding: 0;
-    margin: 0 0.5em 0 0;
+    margin: 0 auto !important;
+}
+
+#footer-info {
+    margin-left: auto !important;
+    margin-right: auto !important;
 }

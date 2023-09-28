@@ -22,9 +22,12 @@
 
     const secondaryNav = document.getElementById("secondary-nav");
     const topHeader = document.getElementById("top-header");
-    const isItemBelowTop = (element) => {
-        elementBottom = element.getBoundingClientRect().bottom;
-        return elementBottom <= 0;
+
+    const isItemInView = (element) => {
+        const elementBottom = element.getBoundingClientRect().bottom;
+        const elementTop = element.getBoundingClientRect().top;
+        const windowSize = window.innerHeight;
+        return elementBottom >= 0 && elementTop <= windowSize;
     };
     const displayScrollElement = (element) => {
         element.classList.add("scrolled");
@@ -34,8 +37,8 @@
         element.classList.remove("scrolled");
     }
 
-    const handleScrollAnimate = (triggerElement, animateElement) => {
-        if (isItemBelowTop(topHeader)) {
+    const hideWhenTriggerInView = (triggerElement, animateElement) => {
+        if (!isItemInView(topHeader)) {
             displayScrollElement(secondaryNav);
         } else {
             hideScrollElement(secondaryNav);
@@ -44,7 +47,7 @@
 
     const watchScroll = () => {
         window.addEventListener('scroll', () => {
-            handleScrollAnimate(topHeader, secondaryNav);
+            hideWhenTriggerInView(topHeader, secondaryNav);
         })
     };
 

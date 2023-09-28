@@ -1,21 +1,21 @@
 .blue-text {
-    color: #007ABB !important;
+    color: #007ABB;
 }
 
 .green-text, html {
-    color: #008566 !important;
+    color: #008566;
 }
 
 .orange-text {
-    color: #D84806 !important;
+    color: #D84806;
 }
 
-.magenta-text {
-    color: #D20098 !important;
+.magenta-text, .wpcf7-not-valid-tip {
+    color: #D20098;
 }
 
 .purple-text {
-    color: #944A9C !important;
+    color: #944A9C;
 }
 
 .white-text {

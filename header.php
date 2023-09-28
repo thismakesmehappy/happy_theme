@@ -9,10 +9,11 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="container-fluid blue-to-purple">
-    <header class="site-header d-flex align-items-center flex-md-row flex-column justify-content-between">
+<div class="container-fluid blue-to-purple" id="top-top">
+    <header id="top-header"
+            class="site-header d-flex align-items-center flex-md-row flex-column justify-content-between">
         <a href="<?php echo esc_url(home_url('/')); ?>">
-            <p class="site-title w-md-100">
+            <p class="site-title w-md-100 text-decoration-none">
                 <?php bloginfo('name'); ?>
 
             </p>
@@ -20,11 +21,21 @@
                 <?php bloginfo('description'); ?>
             </p>
         </a>
+        <div id="top-nav">
         <span class="text-md-start text-center">
     <?php wp_nav_menu(array(
         'theme_location' => 'menu-1',
     )); ?>
 </span>
+        </div>
 
     </header><!-- .site-header -->
+</div>
+<div id="secondary-nav" class="gradient-text purple-to-blue sticky-top js-scroll">
+    <div class="stack-vertical">
+        <?php
+        wp_nav_menu(array(
+            'theme_location' => 'menu-1',
+        )); ?>
+    </div>
 </div>

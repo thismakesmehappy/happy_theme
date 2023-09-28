@@ -1,5 +1,7 @@
 .site-header {
     padding: 0.5em 0;
+    text-decoration: none;
+    text-decoration-color: rgba(0, 0, 0, 0) !important;
 }
 
 .site-title {
@@ -7,24 +9,26 @@
     font-weight: bold;
     margin-bottom: .25rem;
     line-height: 1;
+    text-decoration: none !important;
 }
 
-.site-title a {
-    text-decoration: none;
+.site-title a, .site-title a:visited, .site-title a:hover, .site-title a:active {
+    text-decoration: none !important;
     color: #ffffff !important;
 
-    
+
 }
 
 .site-header {
     color: #ffffff !important;
+    text-decoration: none !important;
 }
 
-.menu a, .menu-main-menu-container a{
+.menu a, .menu-main-menu-container a {
     color: #ffffff !important;
 }
 
-.menu ul, .menu-main-menu-container ul{
+.menu ul, .menu-main-menu-container ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -36,7 +40,7 @@
     line-height: 1em;
 }
 
-.menu ul li a, .menu-main-menu-container ul li a{
+.menu ul li a, .menu-main-menu-container ul li a {
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -49,11 +53,11 @@
     text-transform: none;
 }
 
-.menu-main-menu-container>ul>li {
+.menu-main-menu-container > ul > li {
     padding-top: 0.5rem;
 }
 
-.menu-main-menu-container>ul>li:first-of-type {
+.menu-main-menu-container > ul > li:first-of-type {
     padding-top: 0rem;
 }
 

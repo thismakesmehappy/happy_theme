@@ -1,9 +1,12 @@
-#top-nav {
+#top-nav, #secondary-nav {
     padding: 0.5em;
     color: #ffffff;
+    font-weight: normal !important;
+    letter-spacing: 0.1em;
+    text-decoration: none !important;
 }
 
-#top-nav ul, #top-nav ol {
+#top-nav ul, #top-nav ol, #secondary-nav ul, #secondary-nav ul {
     display: block;
     font-size: 0.9em;
     padding: 0;
@@ -11,27 +14,50 @@
     list-style: none;
 }
 
+#top-nav ul li, #secondary-nav ul li {
+    display: inline-block;
+}
 
 
-
-#top-nav ul > li, #top-nav .section_name {
+#top-nav ul > li, #top-nav .section_name, #secondary-nav ul > li, #secondary-nav .section_name {
     text-transform: uppercase;
     font-weight: 700;
     padding: 0;
     line-height: 0.85em;
 }
 
-#top-nav ul ul > li {
-    text-transform:unset;
+#top-nav ul ul > li, #secondary-nav ul ul > li {
+    text-transform: unset;
     font-weight: 400;
     display: inline;
 }
-
 
 
 ul + li {
     margin-top: 0.45em;
 }
 
+#secondary-nav {
+    word-wrap: break-word;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
 
+#secondary-nav .sticky-top {
+    right: .5em;
+    top: .5em;
+}
 
+.stack-vertical {
+
+    width: 1em;
+    word-wrap: break-word;
+    display: inline-block;
+
+}
+
+.stack-vertical span, .stack-vertical ul li {
+    display: block;
+}

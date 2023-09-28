@@ -18,7 +18,8 @@ Tags: custom-background
 @import url("css/site-header.css");
 @import url("css/site-footer.css");
 @import url("css/posts.css");
-
+@import url("css/top_nav.css");
+@import url("css/js-scroll.css");
 
 body, a, a:hover, a:active, a:visited {
     font-family: courier-prime, monospace;
@@ -46,15 +47,23 @@ h1, h2, .display {
 .display {
     font-family: "tuppence" !important;
     font-style: italic !important;
-    font-size: 2em !important;
+    font-size: 1.75em;
     line-height: 1.35em;
-
 }
 
 h1 {
     font-size: 1.25em;
 
     display: inline !important;
+}
+
+h2 {
+    font-size: 1.25em;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 0.1em;
+
+
 }
 
 a {
@@ -69,19 +78,19 @@ a {
     text-transform: uppercase !important;
 }
 
-.menu-item-has-children .menu-item {
-    text-decoration: underline;
-}
+/*.menu-item-has-children .menu-item {*/
+/*    text-decoration: underline;*/
+/*}*/
 
-.current_page_item {
-    font-style: italic;
-    text-decoration: none !important;
-}
+/*.current_page_item {*/
+/*    font-style: italic;*/
+/*    text-decoration: none !important;*/
+/*}*/
 
-.current_page_item::before {
-    content: "-> ";
-    margin-left: -1.75em;
-}
+/*.current_page_item::before {*/
+/*    content: "-> ";*/
+/*    margin-left: -1.75em;*/
+/*}*/
 
 .noover {
     pointer-events: none;
@@ -112,9 +121,7 @@ h3 {
 }
 
 .featured-image {
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 25rem;
+
 }
 
 p:last-child {
@@ -134,4 +141,22 @@ h1.entry-title {
     opacity: 1;
     height: 0.25em;
     color: #007ABB;
+}
+
+.portfolio-container {
+    margin-top: 1em;
+}
+
+#header-img {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#role-box {
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+#role-box p {
+    margin: 0;
 }

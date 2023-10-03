@@ -20,10 +20,13 @@
 </body>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/secondaryNav.js" type="text/javascript">
 </script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/makeHomeScroll.js" type="text/javascript">
+</script>
 
 <script>
     watchScroll();
     verticalStacking();
+    makeHomeScroll();
 </script>
 
 

@@ -1,8 +1,10 @@
 .js-scroll {
     opacity: 0;
     transition: opacity 500ms;
+    visibility: hidden;
 }
 
 .js-scroll.scrolled {
     opacity: 1;
+    visibility: visible;
 }

@@ -31,8 +31,9 @@
 
     </header><!-- .site-header -->
 </div>
-<div id="secondary-nav" class="gradient-text purple-to-blue sticky-top js-scroll">
-    <div class="stack-vertical">
+<div id="secondary-nav"
+     class="gradient-text border-gradient purple-to-blue border-purple-to-blue sticky-top js-scroll text-center">
+    <div class="stack-vertical m-0 p-0">
         <?php
         wp_nav_menu(array(
             'theme_location' => 'menu-1',

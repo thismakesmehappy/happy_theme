@@ -20,6 +20,7 @@ Tags: custom-background
 @import url("css/posts.css");
 @import url("css/top_nav.css");
 @import url("css/js-scroll.css");
+@import url("css/carousel.css");
 
 body, a, a:hover, a:active, a:visited {
     font-family: courier-prime, monospace;

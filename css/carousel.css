@@ -3,15 +3,42 @@
     background: unset !important;
 }
 
-.carousel blockquote {
+carousel-item {
+
+}
+
+.quote {
     font-family: courier-prime, monospace;
     font-style: italic;
     font-weight: lighter;
     font-size: 1.1em;
+    display: inline-block;
 }
 
-.carousel blockquote p.attribution {
+.attribution {
     font-family: courier-prime, monospace;
     font-size: 1rem;
     font-weight: normal;
+}
+
+.blockquote {
+    margin: 0 auto;
+}
+
+.quote::before {
+    content: "\201C";
+}
+
+.quote::after {
+    content: '\201D';
+}
+
+.quote::before, .quote::after {
+    font-family: "tuppence", serif;
+    font-weight: lighter;
+    font-size: 2em;
+    padding: 0;
+    vertical-align: bottom;
+    display: inline;
+    margin: 0;
 }

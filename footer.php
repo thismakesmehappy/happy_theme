@@ -6,7 +6,7 @@
             <p><?php bloginfo('admin_email'); ?></p>
             <p>267 231 0223</p>
             <?php
-            $contact_form = do_shortcode('[contact-form-7 id="18f459a" title="Untitled"]');
+            $contact_form = do_shortcode('[contact-form-7 id="d40a3e9" title="Contact form"]');
             if (!str_contains($contact_form, "Error:")) {
                 echo $contact_form;
             }

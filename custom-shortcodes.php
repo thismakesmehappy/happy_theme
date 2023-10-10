@@ -32,7 +32,7 @@ function return_featured_url()
 }
 
 
-function post_grid($atts = [], $content = null, $tag = ''): string
+function post_grid($atts = [], $content = null, $tag = '')
 {
     $gradient = $atts['gradient'];
     $projects_string = $atts['projects'];
@@ -103,8 +103,7 @@ function post_grid($atts = [], $content = null, $tag = ''): string
     $uri = get_stylesheet_directory_uri();
     $item_to_return .= "<script src=\"$uri/js/masonry.pkgd.js\"></script>";
 
-    return $item_to_return;
-
+    echo $item_to_return;
 }
 
 add_shortcode('happy_upload_dir', 'uploads_folder');

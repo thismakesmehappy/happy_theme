@@ -1,3 +1,12 @@
+#carousel-quotes {
+    min-height: 14em;
+}
+
+.carousel-inner, .carousel-item {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 .carousel-control-prev, .carousel-control-prev a {
     color: unset !important;
     background: unset !important;

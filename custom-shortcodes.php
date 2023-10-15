@@ -103,7 +103,7 @@ function post_grid($atts = [], $content = null, $tag = '')
     $uri = get_stylesheet_directory_uri();
     $item_to_return .= "<script src=\"$uri/js/masonry.pkgd.js\"></script>";
 
-    echo $item_to_return;
+    return $item_to_return;
 }
 
 add_shortcode('happy_upload_dir', 'uploads_folder');

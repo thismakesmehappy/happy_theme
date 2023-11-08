@@ -3,3 +3,11 @@
     padding: 0;
     margin-bottom: 0;
 }
+
+.figure {
+    margin-top: 1.5em;
+}
+
+.figure .figure-caption {
+    margin-bottom: 0.25em;
+}

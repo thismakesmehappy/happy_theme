@@ -22,14 +22,19 @@ Tags: custom-background
 @import url("css/js-scroll.css");
 @import url("css/carousel.css");
 @import url("css/portfolio.css");
+@import url("css/icons-1.11.1/font/bootstrap-icons.min.css");
 
 body, a, a:hover, a:active, a:visited {
-    font-family: courier-prime, monospace;
     color: #008566;
+    font-size: 1.1rem;
+}
+
+#site-footer, #top-header, figure, .roles, .page-grid, .btn, #secondary-nav {
+    font-family: courier-prime, monospace !important;
 }
 
 h1, h2, .display, .site-title {
-    font-family: "tuppence" !important;
+    font-family: "tuppence", serif !important;
 
 }
 
@@ -135,14 +140,17 @@ h1.entry-title {
     display: inline-block !important;
 }
 
-.separator {
+.separator, .separator-left {
     width: 40%;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 1em;
     opacity: 1;
     height: 0.25em;
     color: #007ABB;
+}
+
+.separator {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .portfolio-container {

@@ -21,7 +21,10 @@ if (!isset($gradient_color) || strlen($gradient_color) == 0) {
         <div class="container">
             <div id="header-img">
                 <?php
-                the_post_thumbnail('my-custom-image-size', array('class' => 'img-fluid'));
+                the_post_thumbnail($size = 'full', array('class' => 'img-fluid'));
+                $url = get_the_post_thumbnail_url('full');
+                echo $url;
+                echo "Yahoo!";
                 ?>
             </div>
             <div id="header entry-title display">

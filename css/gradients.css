@@ -2,19 +2,23 @@
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     background: -webkit-linear-gradient(blue, green);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip:text;
-padding-bottom: .25em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding-bottom: .25em;
 }
 
 .border-gradient {
     border: .25em solid;
     border-image-slice: 1;
-    border-width: .25em;
+}
+
+.border-bottom-gradient {
+    border-bottom: .25em solid;
+    border-image-slice: 1;
 }
 
 .gradient-to-top-right {

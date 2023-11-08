@@ -72,7 +72,7 @@ function post_grid($atts = [], $content = null, $tag = '')
     $item_to_return = "";
 
 
-    $item_to_return .= " <div class = \"row gx-md-2\" data-masonry='{\"percentPosition\": true }'>";
+    $item_to_return .= " <div class = \"row gx-md-2 page-grid\" >";
     foreach ($projects as $project) {
         if (isset($parent)) {
             $id = get_page_by_path("{$parent}/{$project}")->ID;

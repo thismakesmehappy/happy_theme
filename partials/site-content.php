@@ -26,7 +26,9 @@
                         } else if ($temp_gradient_color != "") {
                             $gradient_color = $temp_gradient_color;
                         } else {
-                            $gradient_color = 'blue-to-blue';
+                            $title = get_the_title();
+                            $gradient_color = do_shortcode("[happy_gradient title=$title]");
+
                         }
 
                         // Set title
@@ -84,6 +86,6 @@
     <?php
     endif;
     ?>
-    <div id="work" class="separator purple-to-blue my-3"></div>
+    <div id="work" class="separator purple-to-blue my-4"></div>
     <?php echo do_shortcode('[insert page="portfolio-tiles" display="content"]'); ?>
 </div><!-- .site-content -->

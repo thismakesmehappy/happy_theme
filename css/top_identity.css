@@ -2,6 +2,7 @@
     font-size: 1.5em;
     font-family: "tuppence";
 }
+
 @media screen and (max-width: 767px) {
     #identity {
         width: 100%;

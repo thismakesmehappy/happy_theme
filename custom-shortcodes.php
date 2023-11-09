@@ -1,5 +1,28 @@
 <?php
 
+$gradients = array(
+    "blue-to-green",
+    "blue-to-orange",
+    "blue-to-pink",
+    "blue-to-purple",
+    "green-to-blue",
+    "green-to-orange",
+    "green-to-pink",
+    "green-to-purple",
+    "orange-to-blue",
+    "orange-to-green",
+    "orange-to-pink",
+    "orange-to-purple",
+    "pink-to-blue",
+    "pink-to-green",
+    "pink-to-orange",
+    "pink-to-purple",
+    "purple-to-blue",
+    "purple-to-green",
+    "purple-to-orange",
+    "purple-to-pink",
+);
+
 function uploads_folder()
 {
     $folder = wp_get_upload_dir();
@@ -68,6 +91,10 @@ function post_grid($atts = [], $content = null, $tag = '')
         $corner = '0';
     }
 
+    if (!isset($gradient)) {
+        $gradient = get_gradient_from_title(get_the_title());
+    }
+
 
     $item_to_return = "";
 
@@ -106,8 +133,18 @@ function post_grid($atts = [], $content = null, $tag = '')
     return $item_to_return;
 }
 
+function get_gradient_from_title($atts = array()): string
+{
+    $title = $atts['title'];
+    global $gradients;
+    $number_of_gradients = sizeof($gradients);
+    $hashed = crc32($title) % $number_of_gradients;
+    return $gradients[$hashed];
+}
+
 add_shortcode('happy_upload_dir', 'uploads_folder');
 add_shortcode('happy_media_path', 'media_path');
 add_shortcode('happy_featured_url', 'return_featured_url');
 add_shortcode('happy_url_from_id', 'url_from_id');
 add_shortcode('happy_post_grid', 'post_grid');
+add_shortcode('happy_gradient', 'get_gradient_from_title');

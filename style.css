@@ -26,11 +26,19 @@ Tags: custom-background
 
 body, a, a:hover, a:active, a:visited {
     color: #008566;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+}
+
+.container {
+    line-height: 1.5em;
 }
 
 #site-footer, #top-header, figure, .roles, .page-grid, .btn, #secondary-nav {
     font-family: courier-prime, monospace !important;
+}
+
+#top-header > a {
+    text-decoration: none;
 }
 
 h1, h2, .display, .site-title {
@@ -59,9 +67,10 @@ h1, h2, .display {
 }
 
 h1 {
-    font-size: 1.25em;
-
+    font-size: 1.75em;
     display: inline !important;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 h2 {
@@ -69,6 +78,7 @@ h2 {
     text-transform: uppercase;
     font-style: normal;
     letter-spacing: 0.1em;
+    padding-bottom: 0;
 
 
 }

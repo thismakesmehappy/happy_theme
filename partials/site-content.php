@@ -15,24 +15,16 @@
 
                         <?php
                         // Set featured image if set
-                        if ($args['has_featured_image'] || !isset($args['has_featured_image'])) {
+                        if ($args['has_featured_image'] ?? true) {
                             the_post_thumbnail('full', array('class' => 'img-fluid mb-3'));
                         }
 
                         // Get gradient for page if set
-                        $temp_gradient_color = get_post_meta($post->ID, "gradient", true);
-                        if (isset($args['gradient'])) {
-                            $gradient_color = $args['gradient'];
-                        } else if ($temp_gradient_color != "") {
-                            $gradient_color = $temp_gradient_color;
-                        } else {
-                            $title = get_the_title();
-                            $gradient_color = do_shortcode("[happy_gradient title=$title]");
-
-                        }
+                        $title = get_the_title();
+                        $gradient_color = $args['gradient'] ?? do_shortcode("[happy_gradient title=$title]");
 
                         // Set title
-                        if ($args['has_title'] || !isset($args['has_title'])) {
+                        if ($args['has_title'] ?? true) {
                             the_title("<h1 class=\"entry-title display blue-text gradient-text {$gradient_color} d-inline-block \">", '</h1>');
                         }
 
@@ -46,7 +38,7 @@
                         $role = get_post_meta($post->ID, "role", true);
                         $additional_role = get_post_meta($post->ID, "additional", false);
                         if (isset($role) && $role != "") {
-                            echo "<div class=\"roles border-bottom-gradient border-$gradient_color gradient-text $gradient_color w-100  mb-4 \">";
+                            echo "<div class=\"roles border-bottom-gradient border-$gradient_color gradient-text $gradient_color d-inline-block w-100  mb-4 \">";
                             echo "<ul>";
                             echo "<li>Role: $role</li>";
                             foreach ($additional_role as $additional) {

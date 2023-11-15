@@ -1,7 +1,7 @@
 <div class="container-fluid " id="site-footer">
     <div class="separator purple-to-blue my-4"></div>
-    <div class="d-flex ">
-        <div class="p-3 m-x-auto border-gradient border-purple-to-blue purple-text d-inline-block mt-2"
+    <div class="d-flex row p-5 p-sm-3 p-md-0">
+        <div class="px-3 pb-3 pt-3 col col-12 col-md-8 col-xl-6 m-x-auto border-gradient border-purple-to-blue purple-text d-inline-block mt-2"
              id="footer-info">
             <p class="highlight">Like what you see? Let's Get in touch! </p>
             <p><?php bloginfo('admin_email'); ?></p>
@@ -12,6 +12,10 @@
                 echo $contact_form;
             }
             ?>
+            <div id="rosie" class="d-none">
+                <img src="<?php echo do_shortcode("[happy_media_path]") ?>/jocelyn.png"
+                     class="w-50 align-self-center" />
+            </div>
         </div>
     </div>
 </div>
@@ -24,6 +28,7 @@
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/makeHomeScroll.js" type="text/javascript">
 </script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap/bootstrap.js" type="text/javascript"></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/rosie.js" type="text/javascript"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-3.7.1.js" type="text/javascript"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -36,6 +41,7 @@
     watchScroll();
     verticalStacking();
     makeHomeScroll();
+    rosie();
 </script>
 
 </html>

@@ -37,7 +37,7 @@ body, a, a:hover, a:active, a:visited {
     font-family: courier-prime, monospace !important;
 }
 
-#top-header > a {
+#top-header a {
     text-decoration: none;
 }
 

@@ -1,18 +1,14 @@
 <?php
-$gradient = $args['gradient'];
-$projects = $args['projects'];
-$parent = $args['parent'];
+$gradient = $args['gradient'] ?? "";
+$projects = $args['projects'] ?? [];
+$parent = $args['parent'] . "/" ?? "";
 
 ?>
 
 <div class="row gx-md-2 page-grid"'>
 <?php
 foreach ($projects as $project) {
-    if (isset($parent)) {
-        $id = get_page_by_path("{$parent}/{$project}")->ID;
-    } else {
-        $id = get_page_by_path("{$project}")->ID;
-    }
+    $id = get_page_by_path("{$parent}{$project}")->ID;
 
     $brief = get_post_meta($id, "brief", true);
     $permalink = get_permalink($id);

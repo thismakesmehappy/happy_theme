@@ -10,10 +10,8 @@ $post = get_post();
 $subtitle = get_post_meta($post->ID, "subtitle", true);
 $role = get_post_meta($post->ID, "role", true);
 $additional = get_post_meta($post->ID, "additional");
-$gradient_color = get_post_meta($post->ID, "gradient", true);
-if (!isset($gradient_color) || strlen($gradient_color) == 0) {
-    $gradient_color = "blue-to-purple";
-}
+$gradient_color = get_post_meta($post->ID, "gradient", true) ?? "blue-to-purple";
+
 ?>
 <?php get_header(); ?>
     <div class="container portfolio-container">

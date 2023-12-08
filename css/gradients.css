@@ -1,4 +1,5 @@
-.gradient-text {
+/* https://dev.to/afif/border-with-gradient-and-radius-387f*/
+.gradient-text, .btn-gradient.text, .btn-gradient:hover {
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -8,12 +9,20 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    /*padding-bottom: .25em;*/
+}
+
+.gradient-text {
     padding-bottom: .25em;
 }
 
-.border-gradient {
+.border-gradient, .btn-gradient {
     border: .25em solid;
     border-image-slice: 1;
+}
+
+.btn-gradient {
+    border-radius: 0.375em !important;
 }
 
 .border-bottom-gradient {
@@ -30,143 +39,242 @@
 }
 
 /* BLUE GRADIENTS */
-.blue-to-blue {
+.blue-to-blue,
+.parent-blue-to-blue:hover .card-image-overlay, .btn-gradient.blue-to-blue {
     background-color: #007ABB;
     background-image: linear-gradient(45deg, #007ABB, #007ABB);
 }
 
-.blue-to-green {
+.blue-to-green,
+.parent-blue-to-green:hover .card-image-overlay, .btn-gradient.blue-to-green {
     background-color: #007ABB;
     background-image: linear-gradient(45deg, #007ABB, #008566);
 }
 
-.blue-to-orange {
+.gradient-rotate:hover.blue-to-green {
+    background-image: linear-gradient(-45deg, #007ABB, #008566);
+}
+
+.blue-to-orange,
+.parent-blue-to-orange:hover .card-image-overlay, .btn-gradient.blue-to-orange {
     background-color: #007ABB;
     background-image: linear-gradient(45deg, #007ABB, #D84806);
 }
 
-.blue-to-pink {
+.gradient-rotate:hover.blue-to-orange {
+    background-image: linear-gradient(-45deg, #007ABB, #D84806);
+}
+
+.blue-to-pink,
+.parent-blue-to-pink:hover .card-image-overlay, .btn-gradient.blue-to-pink {
     background-color: #007ABB;
     background-image: linear-gradient(45deg, #007ABB, #D20098);
 }
 
-.blue-to-purple {
+.gradient-rotate:hover.blue-to-pink {
+    background-image: linear-gradient(-45deg, #007ABB, #D20098);
+}
+
+.blue-to-purple, .parent-blue-to-purple:hover .card-image-overlay, .btn-gradient.blue-to-purple {
     background-color: #007ABB;
     background-image: linear-gradient(45deg, #007ABB, #944A9C);
+}
+
+.gradient-rotate:hover.blue-to-purple {
+    background-image: linear-gradient(-45deg, #007ABB, #944A9C);
 }
 
 
 /* GREEN GRADIENTS */
 
-.green-to-blue {
+.green-to-blue, .parent-green-to-blue:hover .card-image-overlay,
+.btn-gradient.green-to-blue {
     background-color: #008566;
     background-image: linear-gradient(45deg, #008566, #007ABB);
 }
 
-.green-to-green {
+.gradient-rotate:hover.green-to-blue {
+    background-image: linear-gradient(-45deg, #008566, #007ABB);
+}
+
+.green-to-green, .parent-green-to-green:hover .card-image-overlay, .btn-gradient.green-to-green {
     background-color: #008566;
     background-image: linear-gradient(45deg, #008566, #008566);
 }
 
-.green-to-orange {
+.gradient-rotate:hover.green-to-green {
+    background-image: linear-gradient(-45deg, #008566, #008566);
+}
+
+.green-to-orange, .parent-green-to-orange:hover .card-image-overlay, .btn-gradient.green-to-orange {
     background-color: #008566;
     background-image: linear-gradient(45deg, #008566, #D84806);
 }
 
-.green-to-pink {
+.gradient-rotate:hover.green-to-orange {
+    background-image: linear-gradient(-45deg, #008566, #D84806);
+}
+
+.green-to-pink, .parent-green-to-pink:hover .card-image-overlay, .btn-gradient.green-to-pink {
     background-color: #008566;
     background-image: linear-gradient(45deg, #008566, #D20098);
 }
 
-.green-to-purple {
+.gradient-rotate:hover.green-to-pink {
+    background-image: linear-gradient(-45deg, #008566, #D20098);
+}
+
+.green-to-purple,
+.parent-green-to-purple:hover .card-image-overlay, .btn-gradient.green-to-purple {
     background-color: #008566;
     background-image: linear-gradient(45deg, #008566, #944A9C);
 }
 
-.green-to-purple-border {
-    background-color: #008566;
-    background-image: linear-gradient(45deg, #008566, #944A9C);
+.gradient-rotate:hover.green-to-purple {
+    background-image: linear-gradient(-45deg, #008566, #944A9C);
 }
 
 
 /* ORANGE GRADIENTS */
 
-.orange-to-blue {
+.orange-to-blue,
+.parent-orange-to-blue:hover .card-image-overlay,
+.btn-gradient.orange-to-blue {
     background-color: #D84806;
     background-image: linear-gradient(45deg, #D84806, #007ABB);
 }
 
-.orange-to-green {
+.gradient-rotate:hover.orange-to-blue {
+    background-image: linear-gradient(-45deg, #D84806, #007ABB);
+}
+
+.orange-to-green,
+.parent-orange-to-green:hover .card-image-overlay, .btn-gradient.orange-to-green {
     background-color: #D84806;
     background-image: linear-gradient(45deg, #D84806, #008566);
 }
 
-.orange-to-orange {
+.gradient-rotate:hover.orange-to-green {
+    background-image: linear-gradient(-45deg, #D84806, #008566);
+}
+
+.orange-to-orange,
+.parent-orange-to-orange:hover .card-image-overlay, .btn-gradient.orange-to-orange {
     background-color: #D84806;
     background-image: linear-gradient(45deg, #D84806, #D84806);
 }
 
-.orange-to-pink {
+.orange-to-pink,
+.parent-orange-to-pink:hover .card-image-overlay, .btn-gradient.orange-to-pink {
     background-color: #D84806;
     background-image: linear-gradient(45deg, #D84806, #D20098);
 }
 
-.orange-to-purple {
+.gradient-rotate:hover.orange-to-pink {
+    background-image: linear-gradient(-45deg, #D84806, #D20098);
+}
+
+.orange-to-purple, .parent-orange-to-purple:hover .card-image-overlay, .btn-gradient.orange-to-purple {
     background-color: #D84806;
     background-image: linear-gradient(45deg, #D84806, #944A9C);
+}
+
+.gradient-rotate:hover.orange-to-purple {
+    background-image: linear-gradient(-45deg, #D84806, #944A9C);
 }
 
 
 /* PINK GRADIENTS */
 
-.pink-to-blue {
+.pink-to-blue,
+.parent-pink-to-blue:hover .card-image-overlay, .btn-gradient.pink-to-blue {
     background-color: #D20098;
     background-image: linear-gradient(45deg, #D20098, #007ABB);
 }
 
-.pink-to-green {
+.gradient-rotate:hove.pink-to-blue {
+    background-image: linear-gradient(-45deg, #D20098, #007ABB);
+}
+
+.pink-to-green,
+.parent-pink-to-green:hover .card-image-overlay, .btn-gradient.pink-to-green {
     background-color: #D20098;
     background-image: linear-gradient(45deg, #D20098, #008566);
 }
 
-.pink-to-orange {
+.gradient-rotate:hover.pink-to-greenn {
+    background-image: linear-gradient(-45deg, #D20098, #008566);
+}
+
+.pink-to-orange,
+.parent-pink-to-orange:hover .card-image-overlay, .btn-gradient.pink-to-orange {
     background-color: #D20098;
     background-image: linear-gradient(45deg, #D20098, #D84806);
 }
 
-.pink-to-pink {
+.gradient-rotate:hover.pink-to-orange {
+    background-image: linear-gradient(-45deg, #D20098, #D84806);
+}
+
+.pink-to-pink, .parent-pink-to-pink:hover .card-image-overlay, .btn-gradient.pink-to-pink {
     background-color: #D20098;
     background-image: linear-gradient(45deg, #D20098, #D20098);
 }
 
-.pink-to-purple {
+.pink-to-purple,
+.parent-pink-to-purple:hover .card-image-overlay, .btn-gradient.pink-to-purple {
     background-color: #D20098;
     background-image: linear-gradient(45deg, #D20098, #944A9C);
 }
 
+.gradient-rotate:hover.pink-to-purple {
+    background-image: linear-gradient(-45deg, #D20098, #944A9C);
+}
+
 /* PURPLE GRADIENTS */
 
-.purple-to-blue {
+.purple-to-blue,
+.parent-purple-to-blue:hover .card-image-overlay, .btn-gradient.purple-to-blue {
     background-color: #944A9C;
     background-image: linear-gradient(45deg, #944A9C, #007ABB);
 }
 
-.purple-to-green {
+.gradient-rotate:hover.purple-to-blue {
+    background-image: linear-gradient(-45deg, #944A9C, #007ABB);
+}
+
+.purple-to-green,
+.parent-purple-to-green:hover .card-image-overlay, .btn-gradient.purple-to-green {
     background-color: #944A9C;
     background-image: linear-gradient(45deg, #944A9C, #008566);
 }
 
-.purple-to-orange {
+.gradient-rotate:hover.purple-to-green {
+    background-image: linear-gradient(-45deg, #944A9C, #008566);
+}
+
+.purple-to-orange,
+.parent-purple-to-purple:hover .card-image-overlay, .btn-gradient.purple-to-orange {
     background-color: #944A9C;
     background-image: linear-gradient(45deg, #944A9C, #D84806);
 }
 
-.purple-to-pink {
+.gradient-rotate:hover.purple-to-orange {
+    background-image: linear-gradient(-45deg, #944A9C, #D84806);
+}
+
+.purple-to-pink,
+.parent-purple-to-pink:hover .card-image-overlay, .btn-gradient.purple-to-pink {
     background-color: #944A9C;
     background-image: linear-gradient(45deg, #944A9C, #D20098);
 }
 
-.purple-to-purple {
+.gradient-rotate:hover.purple-to-pink {
+    background-image: linear-gradient(-45deg, #944A9C, #D20098);
+}
+
+.purple-to-purple,
+.parent-purple-purple:hover .card-image-overlay, .btn-gradient.purple-to-purple {
     background-color: #944A9C;
     background-image: linear-gradient(45deg, #944A9C, #944A9C);
 }
@@ -174,27 +282,27 @@
 /* BORDER GRADIENTS */
 
 /* BORDER BLUE GRADIENTS */
-.border-blue-to-blue {
+.border-blue-to-blue, .btn-gradient.blue-to-blue {
     border-color: #007ABB;
     border-image-source: linear-gradient(45deg, #007ABB, #007ABB);
 }
 
-.border-blue-to-green {
+.border-blue-to-green, .btn-gradient.blue-to-green {
     border-color: #007ABB;
     border-image-source: linear-gradient(45deg, #007ABB, #008566);
 }
 
-.border-blue-to-orange {
+.border-blue-to-orange, .btn-gradient.blue-to-orange {
     border-color: #007ABB;
     border-image-source: linear-gradient(45deg, #007ABB, #D84806);
 }
 
-.border-blue-to-pink {
+.border-blue-to-pink, .btn-gradient.blue-to-pink {
     border-color: #007ABB;
     border-image-source: linear-gradient(45deg, #007ABB, #D20098);
 }
 
-.border-blue-to-purple {
+.border-blue-to-purple, .btn-gradient.blue-to-purple {
     border-color: #007ABB;
     border-image-source: linear-gradient(45deg, #007ABB, #944A9C);
 }
@@ -202,32 +310,32 @@
 
 /* BORDER GREEN GRADIENTS */
 
-.border-green-to-blue {
+.border-green-to-blue, .btn-gradient.green-to-blue {
     border-color: #008566;
     border-image-source: linear-gradient(45deg, #008566, #007ABB);
 }
 
-.border-green-to-green {
+.border-green-to-green, .btn-gradient.green-to-green {
     border-color: #008566;
     border-image-source: linear-gradient(45deg, #008566, #008566);
 }
 
-.border-green-to-orange {
+.border-green-to-orange, .btn-gradient.green-to-orange {
     border-color: #008566;
     border-image-source: linear-gradient(45deg, #008566, #D84806);
 }
 
-.border-green-to-pink {
+.border-green-to-pink, .btn-gradient.green-to-pink {
     border-color: #008566;
     border-image-source: linear-gradient(45deg, #008566, #D20098);
 }
 
-.border-green-to-purple {
+.border-green-to-purple, .btn-gradient.green-to-purple {
     border-color: #008566;
     border-image-source: linear-gradient(45deg, #008566, #944A9C);
 }
 
-.border-green-to-purple-border {
+.border-green-to-purple-border, .btn-gradient.green-to-purple {
     border-color: #008566;
     border-image-source: linear-gradient(45deg, #008566, #944A9C);
 }
@@ -235,27 +343,27 @@
 
 /* BORDER ORANGE GRADIENTS */
 
-.border-orange-to-blue {
+.border-orange-to-blue, .btn-gradient.orange-to-blue {
     border-color: #D84806;
     border-image-source: linear-gradient(45deg, #D84806, #007ABB);
 }
 
-.border-orange-to-green {
+.border-orange-to-green, .btn-gradient.orange-to-green {
     border-color: #D84806;
     border-image-source: linear-gradient(45deg, #D84806, #008566);
 }
 
-.border-orange-to-orange {
+.border-orange-to-orange, .btn-gradient.orange-to-orange {
     border-color: #D84806;
     border-image-source: linear-gradient(45deg, #D84806, #D84806);
 }
 
-.border-orange-to-pink {
+.border-orange-to-pink, .btn-gradient.orange-to-pink {
     border-color: #D84806;
     border-image-source: linear-gradient(45deg, #D84806, #D20098);
 }
 
-.border-orange-to-purple {
+.border-orange-to-purple, .btn-gradient.orange-to-purple {
     border-color: #D84806;
     border-image-source: linear-gradient(45deg, #D84806, #944A9C);
 }
@@ -263,54 +371,54 @@
 
 /* BORDER PINK GRADIENTS */
 
-.border-pink-to-blue {
+.border-pink-to-blue, .btn-gradient.pink-to-blue {
     border-color: #D20098;
     border-image-source: linear-gradient(45deg, #D20098, #007ABB);
 }
 
-.border-pink-to-green {
+.border-pink-to-green, .btn-gradient.pink-to-green {
     border-color: #D20098;
     border-image-source: linear-gradient(45deg, #D20098, #008566);
 }
 
-.border-pink-to-orange {
+.border-pink-to-orange, .btn-gradient.pink-to-orange {
     border-color: #D20098;
     border-image-source: linear-gradient(45deg, #D20098, #D84806);
 }
 
-.border-pink-to-pink {
+.border-pink-to-pink, .btn-gradient.pink-to-pink {
     border-color: #D20098;
     border-image-source: linear-gradient(45deg, #D20098, #D20098);
 }
 
-.border-pink-to-purple {
+.border-pink-to-purple, .btn-gradient.pink-to-purple {
     border-color: #D20098;
     border-image-source: linear-gradient(45deg, #D20098, #944A9C);
 }
 
 /* BORDER PURPLE GRADIENTS */
 
-.border-purple-to-blue {
+.border-purple-to-blue, .btn-gradient.purple-to-blue {
     border-color: #944A9C;
     border-image-source: linear-gradient(45deg, #944A9C, #007ABB);
 }
 
-.border-purple-to-green {
+.border-purple-to-green, .btn-gradient.purple-to-green {
     border-color: #944A9C;
     border-image-source: linear-gradient(45deg, #944A9C, #008566);
 }
 
-.border-purple-to-orange {
+.border-purple-to-orange, .btn-gradient.purple-to-orange {
     border-color: #944A9C;
     border-image-source: linear-gradient(45deg, #944A9C, #D84806);
 }
 
-.border-purple-to-pink {
+.border-purple-to-pink, .btn-gradient.purple-to-pink {
     border-color: #944A9C;
     border-image-source: linear-gradient(45deg, #944A9C, #D20098);
 }
 
-.border-purple-to-purple {
+.border-purple-to-purple, .btn-gradient.purple-to-purple {
     border-color: #944A9C;
     border-image-source: linear-gradient(45deg, #944A9C, #944A9C);
 }

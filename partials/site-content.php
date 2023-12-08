@@ -58,8 +58,9 @@
 
                     <?php
                     $content = apply_filters('the_content', get_the_content());
-                    $content = str_replace("<h2>", "<h2 class=\"blue-text gradient-text $gradient_color d-inline-block\">", $content);
-                    $content = str_replace("<button>", "<button class=\"btn btn-primary $gradient_color text-white border-0\">", $content);
+                    //                    $content = str_replace("<h2>", "<h2 class=\"blue-text gradient-text $gradient_color d-inline-block\">", $content);
+                    $content = preg_replace("<h2(.*)>", "h2 class=\"blue-text gradient-text $gradient_color d-inline-block\"$1", $content);
+                    $content = str_replace("<button>", "<button class=\"btn btn-gradient btn-gradient-$gradient_color $gradient_color text-white\">", $content);
                     echo $content; ?>
                 </div><!-- .entry-content -->
 

@@ -1,0 +1,17 @@
+@use "../variables/colors";
+@use "sass:map";
+
+$font_sizes: ("base": 1.2rem);
+
+@mixin copy-titles {
+  font-family: "tuppence", serif !important;
+}
+
+@mixin copy-display {
+  font-family: courier-prime, monospace !important;
+}
+
+body, a, a:hover, a:active, a:visited {
+  color: map.get(colors.$colors, "green");
+  font-size: map.get($font_sizes, "base");
+}

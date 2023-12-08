@@ -83,16 +83,19 @@ function post_grid($atts = [], $content = null, $tag = '')
         $permalink = get_permalink($id);
         $post_thumbnail_url = get_the_post_thumbnail_url($id, 'thumbnail-grid');
         $title = get_the_title($id);
+        $gradient_for_page = do_shortcode("[happy_gradient title=$title]");
 
         $item_to_return .= "<div class=\" col col-$col col-sm-$col_sm col-md-$col_md col-lg-$col_lg col-xl-$col_xl border-2 rounded-0 p-2\">";
-        $item_to_return .= "<div class=\"card border-$border \">";
+        $item_to_return .= "<div class=\"card border-$border parent parent-$gradient_for_page\" id=\"card-$id\">";
         $item_to_return .= "<a href = \"{$permalink}\" class=\"text-decoration-none\">";
-
+        $item_to_return .= "<div class='card-image'>";
         $item_to_return .= "<img src=\"{$post_thumbnail_url}\" class=\"card-img-top img-fluid\" alt=\"...\">";
+        $item_to_return .= "<div class='card-image-overlay-$gradient_for_page card-image-overlay'></div>";
+        $item_to_return .= "</div>";
         $item_to_return .= "<div class=\"card-body\">";
         $item_to_return .= " <h3 class=\"card-title mb-0\"> {$title} </h3>";
         $item_to_return .= "<p class=\"card-text\"> {$brief} </p>";
-        $item_to_return .= "<span  class=\"btn btn-primary $gradient border-0\">See more</span>";
+        $item_to_return .= "<span  class=\"btn btn-primary btn-gradient btn-gradient-$gradient $gradient\">See more</span>";
         $item_to_return .= "</a>";
         $item_to_return .= "</div>";
         $item_to_return .= "</div>";
@@ -185,7 +188,7 @@ function quote_grid($atts = array()): string
     $col_xl = $atts['col_xl'] ?? $col_lg;
 
     $outer_open = '<div class="row grid" data-masonry=\'{"percentPosition": true }\'>';
-    $quote_open = "<div class=\"col col-$col col-sm-$col_sm col-md-$col_md col-lg-$col_lg col-xl-$col_xl gradient-text gradient mb-4\">";
+    $quote_open = "<div class=\"gradient-rotate col col-$col col-sm-$col_sm col-md-$col_md col-lg-$col_lg col-xl-$col_xl gradient-text gradient mb-4\">";
     $quote_close = '</div>';
     $outer_close = '</div>';
 
@@ -217,6 +220,7 @@ function quote_slider($atts = array()): string
 
 add_shortcode('happy_upload_dir', 'uploads_folder');
 add_shortcode('happy_media_path', 'media_path');
+add_shortcode('happy_path', 'get_site_url');
 add_shortcode('happy_featured_url', 'return_featured_url');
 add_shortcode('happy_url_from_id', 'url_from_id');
 add_shortcode('happy_post_grid', 'post_grid');

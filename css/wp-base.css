@@ -37,3 +37,7 @@ label {
 .entry-title {
 
 }
+
+.card, .card-image img {
+    border-radius: 0;
+}

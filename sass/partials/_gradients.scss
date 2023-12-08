@@ -1,0 +1,47 @@
+@use "sass:map";
+@use "../variables/sizes";
+@use "../variables/colors";
+
+$gradient-angle: 45deg;
+
+.gradient-text {
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  background: -webkit-linear-gradient(blue, green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-bottom: map.get(sizes.$padding, "small");
+}
+
+.border-gradient {
+  border: map.get(sizes.$border, "small") solid;
+  border-image-slice: 1;
+}
+
+.border-bottom-gradient {
+  border-bottom: map.get(sizes.$border, "small") solid;
+  border-image-slice: 1;
+}
+
+.gradient-to-top-right {
+  background-image: linear-gradient($gradient-angle, $gradient-angle);
+}
+
+.gradient-to-bottom-right {
+  background-image: linear-gradient($gradient-angle, -$gradient-angle);
+}
+
+@each $color_name_first, $color_value_first in colors.$colors {
+  @each $color_name_second, $color_value_second in colors.$colors {
+    @if ($color_name_first != "white" and $color_name_second != "white") {
+      .#{$color_name_first}-to-#{$color_name_second}, .parent-#{$color_name_first}-to-#{$color_name_second}:hover .btn {
+        background-color: $color_value_first;
+        background-image: linear-gradient($gradient-angle, $color_value_first, $color_value_second);
+      }
+    }
+  }
+}

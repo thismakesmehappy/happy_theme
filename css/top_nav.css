@@ -9,6 +9,10 @@
     text-decoration: none !important;
 }
 
+#top-nav a:hover, #secondary-nav a:hover {
+    font-weight: normal;
+}
+
 #top-nav ul, #top-nav ol, #secondary-nav ul, #secondary-nav ul {
     display: block;
     font-size: 0.9em;
@@ -61,3 +65,4 @@ ul + li {
 .stack-vertical span, .stack-vertical ul li {
     display: block;
 }
+

@@ -16,7 +16,7 @@ function my_custom_theme_sidebar()
 
 add_action('widgets_init', 'my_custom_theme_sidebar');
 
-// Suport featured image
+// Support featured image
 add_theme_support('post-thumbnails');
 
 // Support excerpt
@@ -80,3 +80,7 @@ add_filter('term_description', 'shortcode_unautop');
 add_filter('term_description', 'do_shortcode');
 add_filter('comment_text', 'shortcode_unautop');
 add_filter('comment_text', 'do_shortcode');
+
+ini_set('upload_max_size', '64M');
+ini_set('post_max_size', '64M');
+ini_set('max_execution_time', '300');

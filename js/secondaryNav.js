@@ -1,6 +1,5 @@
 const secondaryNav = document.getElementById("secondary-nav");
 const topHeader = document.getElementById("top-header");
-const carousel = document.getElementById("carousel-slides");
 
 const isItemInView = (element) => {
   const elementBottom = element.getBoundingClientRect().bottom;
@@ -16,23 +15,17 @@ const hideScrollElement = (element) => {
   element.classList.remove("scrolled");
 };
 
-const hideWhenTriggerInView = (triggerElement, animateElement) => {
+const hideWhenTriggerInView = () => {
   if (!isItemInView(topHeader)) {
     displayScrollElement(secondaryNav);
   } else {
     hideScrollElement(secondaryNav);
   }
-
-  if (!isItemInView(carousel)) {
-    $(".carousel").pause();
-  } else {
-    $(".carousel").cycle();
-  }
 };
 
 const watchScroll = () => {
   window.addEventListener("scroll", () => {
-    hideWhenTriggerInView(topHeader, secondaryNav, carousel);
+    hideWhenTriggerInView();
   });
 };
 

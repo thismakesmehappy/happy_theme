@@ -1,0 +1,19 @@
+@use "sass:map";
+@use "../variables/colors";
+
+.wpcf7-not-valid-tip {
+  color: map.get(colors.$colors, "magenta");
+}
+
+@each $color_name, $color_value in colors.$colors {
+  .#{$color_name}-text {
+    color: $color_value;
+  }
+  .#{$color_name}-bg {
+    color: $color_value !important;
+  }
+
+  .#{$color_name}-border {
+    border-color: $color_value !important;
+  }
+}

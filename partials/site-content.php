@@ -6,6 +6,11 @@
 
 
             the_post();
+
+            // Get gradient for page if set
+            $title = get_the_title();
+            $gradient_color = $args['gradient'] ?? do_shortcode("[happy_gradient title=$title]");
+            $h2_class = "blue-text gradient-text $gradient_color d-inline-block";
             ?>
 
             <article <?php post_class(); ?>>
@@ -19,48 +24,81 @@
                             the_post_thumbnail('full', array('class' => 'img-fluid mb-3'));
                         }
 
-                        // Get gradient for page if set
-                        $title = get_the_title();
-                        $gradient_color = $args['gradient'] ?? do_shortcode("[happy_gradient title=$title]");
 
                         // Set title
                         if ($args['has_title'] ?? true) {
                             the_title("<h1 class=\"entry-title display blue-text gradient-text {$gradient_color} d-inline-block \">", '</h1>');
                         }
-
-                        // Set subtitle if defined
-                        $subtitle = get_post_meta($post->ID, "subtitle", true);
-                        if (isset($subtitle) && $subtitle != "") {
-                            echo "<h2 class=\"blue-text {$gradient_color} gradient-text d-inline-block\">$subtitle</h2>";
-                        }
-
-                        // Set roles if defined
-                        $role = get_post_meta($post->ID, "role", true);
-                        $additional_role = get_post_meta($post->ID, "additional", false);
-                        if (isset($role) && $role != "") {
-                            echo "<div class=\"roles border-bottom-gradient border-$gradient_color gradient-text $gradient_color d-inline-block w-100  mb-4 \">";
-                            echo "<ul>";
-                            echo "<li>Role: $role</li>";
-                            foreach ($additional_role as $additional) {
-                                echo "<li>$additional</li>";
-                            }
-                            echo "</ul>";
-                            echo "<div class=\"separator-left w-25  \" />";
-                            echo "</div>";
-                        }
-
                         ?>
 
+                        <!-- Set subtitle if defined -->
+                        <?php
+                        $subtitle = get_post_meta($post->ID, "subtitle", true);
+                        if (isset($subtitle) && $subtitle != ""): ?>
+                            <h2 class="blue-text <?= $gradient_color ?> gradient-text d-inline-block\"><?= $subtitle ?></h2>
+                        <?php endif; ?>
 
-                    </div>
+                        <!-- Set roles if defined -->
+                        <?php
+                        $role = get_post_meta($post->ID, "role", true);
+                        $additional_role = get_post_meta($post->ID, "additional", false);
+                        if (isset($role) && $role != ""): ?>
+                        <div class="roles border-bottom-gradient border-<?= $gradient_color ?> gradient-text <?= $gradient_color ?> d-inline-block w-100  mb-4">
+                            <ul>
+                                <li>Role: <?php echo $role ?></li>
+                                <?php foreach ($additional_role as $additional): ?>
+                                    <li><?= $additional ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+
+                            <div class="separator-left w-25">
+                            </div>
+                            <?php endif; ?>
+
+
+                        </div>
                 </header>
                 <div class="entry-content">
+                    <?php
+                    $event_brief = get_post_meta($post->ID, 'event_brief', true);
+                    $challenges = get_post_meta($post->ID, 'challenges', true);
+                    $goals = get_post_meta($post->ID, 'goals', true);
+                    $outcome = get_post_meta($post->ID, 'outcome', true);
+                    if (isset($event_brief) && $event_brief != ""): ?>
+                        <!-- intro -->
+                        <div class="row">
+                            <div class="col col-12 brief mb-2">
+                                <?= $event_brief ?>
+                            </div>
+                            <?php if (isset($challenges) && $challenges != ""): ?>
+                                <div class="col col-12 col-md-4">
+                                    <h2 class="<?= $h2_class ?>">Challenges</h2>
+                                    <?= $challenges ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if (isset($goals) && $goals != ""): ?>
+                                <div class="col col-12 col-md-4">
+                                    <h2 class="<?= $h2_class ?>">Goals</h2>
+                                    <?= $goals ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if (isset($outcome) && $outcome != ""): ?>
+                                <div class="col col-12 col-md-4">
+                                    <h2 class="<?= $h2_class ?>">Outcome</h2>
+                                    <?= $outcome ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                        <!-- end intro -->
+                    <?php endif; ?>
 
                     <?php
                     $content = apply_filters('the_content', get_the_content());
                     //                    $content = str_replace("<h2>", "<h2 class=\"blue-text gradient-text $gradient_color d-inline-block\">", $content);
-                    $content = preg_replace("<h2(.*)>", "h2 class=\"blue-text gradient-text $gradient_color d-inline-block\"$1", $content);
+                    $content = preg_replace("<h2(.*)>", "h2 class=\"{$h2_class}\"$1", $content);
                     $content = str_replace("<button>", "<button class=\"btn btn-gradient btn-gradient-$gradient_color $gradient_color text-white\">", $content);
+                    $content = str_replace("btn-page-gradient", "btn btn-gradient btn-gradient-$gradient_color $gradient_color text-white", $content);
+                    $content = str_replace("page-gradient", "$gradient_color", $content);
                     echo $content; ?>
                 </div><!-- .entry-content -->
 

@@ -6,10 +6,12 @@
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     background: -webkit-linear-gradient(blue, green);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
     /*padding-bottom: .25em;*/
+}
+
+.gradient-rotate {
+    transition-duration: 0.5s;
 }
 
 .gradient-text {
@@ -52,7 +54,7 @@
 }
 
 .gradient-rotate:hover.blue-to-green {
-    background-image: linear-gradient(-45deg, #007ABB, #008566);
+    background-image: linear-gradient(225deg, #007ABB, #008566);
 }
 
 .blue-to-orange,
@@ -62,7 +64,7 @@
 }
 
 .gradient-rotate:hover.blue-to-orange {
-    background-image: linear-gradient(-45deg, #007ABB, #D84806);
+    background-image: linear-gradient(225deg, #007ABB, #D84806);
 }
 
 .blue-to-pink,
@@ -72,7 +74,7 @@
 }
 
 .gradient-rotate:hover.blue-to-pink {
-    background-image: linear-gradient(-45deg, #007ABB, #D20098);
+    background-image: linear-gradient(225deg, #007ABB, #D20098);
 }
 
 .blue-to-purple, .parent-blue-to-purple:hover .card-image-overlay, .btn-gradient.blue-to-purple {
@@ -81,7 +83,7 @@
 }
 
 .gradient-rotate:hover.blue-to-purple {
-    background-image: linear-gradient(-45deg, #007ABB, #944A9C);
+    background-image: linear-gradient(225deg, #007ABB, #944A9C);
 }
 
 
@@ -94,7 +96,7 @@
 }
 
 .gradient-rotate:hover.green-to-blue {
-    background-image: linear-gradient(-45deg, #008566, #007ABB);
+    background-image: linear-gradient(225deg, #008566, #007ABB);
 }
 
 .green-to-green, .parent-green-to-green:hover .card-image-overlay, .btn-gradient.green-to-green {
@@ -103,7 +105,7 @@
 }
 
 .gradient-rotate:hover.green-to-green {
-    background-image: linear-gradient(-45deg, #008566, #008566);
+    background-image: linear-gradient(225deg, #008566, #008566);
 }
 
 .green-to-orange, .parent-green-to-orange:hover .card-image-overlay, .btn-gradient.green-to-orange {
@@ -112,7 +114,7 @@
 }
 
 .gradient-rotate:hover.green-to-orange {
-    background-image: linear-gradient(-45deg, #008566, #D84806);
+    background-image: linear-gradient(225deg, #008566, #D84806);
 }
 
 .green-to-pink, .parent-green-to-pink:hover .card-image-overlay, .btn-gradient.green-to-pink {
@@ -121,7 +123,7 @@
 }
 
 .gradient-rotate:hover.green-to-pink {
-    background-image: linear-gradient(-45deg, #008566, #D20098);
+    background-image: linear-gradient(225deg, #008566, #D20098);
 }
 
 .green-to-purple,
@@ -131,7 +133,7 @@
 }
 
 .gradient-rotate:hover.green-to-purple {
-    background-image: linear-gradient(-45deg, #008566, #944A9C);
+    background-image: linear-gradient(225deg, #008566, #944A9C);
 }
 
 
@@ -145,7 +147,7 @@
 }
 
 .gradient-rotate:hover.orange-to-blue {
-    background-image: linear-gradient(-45deg, #D84806, #007ABB);
+    background-image: linear-gradient(225deg, #D84806, #007ABB);
 }
 
 .orange-to-green,
@@ -155,7 +157,7 @@
 }
 
 .gradient-rotate:hover.orange-to-green {
-    background-image: linear-gradient(-45deg, #D84806, #008566);
+    background-image: linear-gradient(225deg, #D84806, #008566);
 }
 
 .orange-to-orange,
@@ -171,7 +173,7 @@
 }
 
 .gradient-rotate:hover.orange-to-pink {
-    background-image: linear-gradient(-45deg, #D84806, #D20098);
+    background-image: linear-gradient(225deg, #D84806, #D20098);
 }
 
 .orange-to-purple, .parent-orange-to-purple:hover .card-image-overlay, .btn-gradient.orange-to-purple {
@@ -180,7 +182,7 @@
 }
 
 .gradient-rotate:hover.orange-to-purple {
-    background-image: linear-gradient(-45deg, #D84806, #944A9C);
+    background-image: linear-gradient(225deg, #D84806, #944A9C);
 }
 
 
@@ -193,7 +195,7 @@
 }
 
 .gradient-rotate:hove.pink-to-blue {
-    background-image: linear-gradient(-45deg, #D20098, #007ABB);
+    background-image: linear-gradient(225deg, #D20098, #007ABB);
 }
 
 .pink-to-green,
@@ -203,7 +205,7 @@
 }
 
 .gradient-rotate:hover.pink-to-greenn {
-    background-image: linear-gradient(-45deg, #D20098, #008566);
+    background-image: linear-gradient(225deg, #D20098, #008566);
 }
 
 .pink-to-orange,
@@ -213,7 +215,7 @@
 }
 
 .gradient-rotate:hover.pink-to-orange {
-    background-image: linear-gradient(-45deg, #D20098, #D84806);
+    background-image: linear-gradient(225deg, #D20098, #D84806);
 }
 
 .pink-to-pink, .parent-pink-to-pink:hover .card-image-overlay, .btn-gradient.pink-to-pink {
@@ -228,7 +230,7 @@
 }
 
 .gradient-rotate:hover.pink-to-purple {
-    background-image: linear-gradient(-45deg, #D20098, #944A9C);
+    background-image: linear-gradient(225deg, #D20098, #944A9C);
 }
 
 /* PURPLE GRADIENTS */
@@ -240,7 +242,7 @@
 }
 
 .gradient-rotate:hover.purple-to-blue {
-    background-image: linear-gradient(-45deg, #944A9C, #007ABB);
+    background-image: linear-gradient(225deg, #944A9C, #007ABB);
 }
 
 .purple-to-green,
@@ -250,7 +252,7 @@
 }
 
 .gradient-rotate:hover.purple-to-green {
-    background-image: linear-gradient(-45deg, #944A9C, #008566);
+    background-image: linear-gradient(225deg, #944A9C, #008566);
 }
 
 .purple-to-orange,
@@ -260,7 +262,7 @@
 }
 
 .gradient-rotate:hover.purple-to-orange {
-    background-image: linear-gradient(-45deg, #944A9C, #D84806);
+    background-image: linear-gradient(225deg, #944A9C, #D84806);
 }
 
 .purple-to-pink,
@@ -270,7 +272,7 @@
 }
 
 .gradient-rotate:hover.purple-to-pink {
-    background-image: linear-gradient(-45deg, #944A9C, #D20098);
+    background-image: linear-gradient(225deg, #944A9C, #D20098);
 }
 
 .purple-to-purple,
